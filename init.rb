@@ -16,7 +16,8 @@ class SelectToSelect2ViewListener < Redmine::Hook::ViewListener
       javascript_include_tag('select2-4.0.13/select2.min.js', :plugin => :select_to_select2) +
       javascript_include_tag('select2-4.0.13/i18n/zh-CN.js', :plugin => :select_to_select2) +
       javascript_include_tag('slecttoselect2main.js', :plugin => :select_to_select2) +
-      stylesheet_link_tag('select2-4.0.13/select2.min.css', :plugin => :select_to_select2)
+      stylesheet_link_tag('select2-4.0.13/select2.min.css', :plugin => :select_to_select2) +
+      stylesheet_link_tag('select2-patch.css', :plugin => :select_to_select2)
   end
   
 end

@@ -38,6 +38,19 @@ function replaceAllSelect2(){
         if ($("#" + elements[i].id).hasClass('select2-hidden-accessible')) {
             continue;
         }
+        if ($("#" + elements[i].id).next().hasClass('toggle-multiselect')) {
+            var a =  $("#" + elements[i].id);
+            $("#" + elements[i].id).next().on('click', function(evt) {
+                setTimeout(function(){
+                    a.select2({
+                        width:"resolve",
+                        placeholder: "",
+                        allowClear: true,
+                        language: navigator.language
+                    });
+                }, 0)
+            })
+        }
 
         // For not woroking 「width:resolve」
         if(elements[i].id == 'year'
