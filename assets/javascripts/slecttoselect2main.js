@@ -31,10 +31,13 @@
 }(jQuery));
 
 function replaceAllSelect2(){
-
     var elements = document.getElementsByTagName("select");
 
     for (i = 0; i < elements.length; i++) {
+
+        if ($("#" + elements[i].id).hasClass('select2-hidden-accessible')) {
+            continue;
+        }
 
         // For not woroking 「width:resolve」
         if(elements[i].id == 'year'
@@ -46,7 +49,8 @@ function replaceAllSelect2(){
             $("#" + elements[i].id).select2({
                 width:"175px",
                 placeholder: "",
-                allowClear: true
+                allowClear: true,
+                language: navigator.language
             });
         }
         else if (elements[i].id == 'available_c' || elements[i].id == 'selected_c') {
@@ -56,10 +60,10 @@ function replaceAllSelect2(){
             $("#" + elements[i].id).select2({
                 width:"resolve",
                 placeholder: "",
-                allowClear: true
+                allowClear: true,
+                language: navigator.language
             });
         }
-
     }
 
 }
