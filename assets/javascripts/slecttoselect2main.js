@@ -38,7 +38,7 @@ function replaceAllSelect2(){
         if ($("#" + elements[i].id).hasClass('select2-hidden-accessible')) {
             continue;
         }
-        if ($("#" + elements[i].id).next().hasClass('toggle-multiselect')) {
+        if ($("#" + elements[i].id).next().hasClass('toggle-multiselect') || $("#" + elements[i].id).next().hasClass('assign-to-me-link')) {
             var a =  $("#" + elements[i].id);
             $("#" + elements[i].id).next().on('click', function(evt) {
                 setTimeout(function(){
