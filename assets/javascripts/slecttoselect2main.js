@@ -62,7 +62,6 @@ function replaceAllSelect2(){
 
             $("#" + elements[i].id).select2({
                 width:"175px",
-                placeholder: "",
                 allowClear: true,
                 language: navigator.language
             });
@@ -72,8 +71,7 @@ function replaceAllSelect2(){
         } else {
             // For All Pages
             $("#" + elements[i].id).select2({
-                width:"resolve",
-                placeholder: "",
+                width:"200px",
                 allowClear: true,
                 language: navigator.language
             });
